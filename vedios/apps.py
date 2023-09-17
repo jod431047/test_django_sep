@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class PostsConfig(AppConfig):
+class VediosConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'posts'
+    name = 'vedios'
