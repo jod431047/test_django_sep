@@ -19,11 +19,13 @@ from django.urls import path
 from django.conf import settings
 from django.conf.urls.static import static
 from vedios.views import VedioList
-
+from vedios.api import VedioListAPI
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('video/',VedioList.as_view()),
+    path('video/api/list' , VedioListAPI.as_view()),
+    
 ]
 
 
