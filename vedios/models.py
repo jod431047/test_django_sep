@@ -1,10 +1,10 @@
 from django.db import models
-
 # Create your models here.
 from django.contrib.auth.models import User
 
 
-class Video(models.Model):
+
+class Vedio(models.Model):
     title = models.CharField(max_length=255)
     description = models.TextField()
     url = models.URLField()
@@ -21,7 +21,7 @@ class Video(models.Model):
 class Comment(models.Model):
     content = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
-    video = models.ForeignKey(Video, on_delete=models.CASCADE)
+    video = models.ForeignKey(Vedio, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
     def __str__(self):
